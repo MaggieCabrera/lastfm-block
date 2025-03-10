@@ -2,15 +2,12 @@
 **Clean and simple recently played Last.FM Plugin for Wordpress**
 
 === LastFM Played for Wordpress ===
-- Contributors: mangorausch
+- Contributors: onemaggie
 - Tags: LastFM, Last FM, Scrobble
 - Requires at least: 4.0
 - Tested up to: 4.9
 - Stable tag: trunk
 - License: MIT
-
-
-https://wordpress.org/plugins/lastfm-played-for-wp/
 
 
 ----------
@@ -25,13 +22,5 @@ Installation
 5. Happy Scrobbling!
 
 
-----------
-
-
-Coming features
----------------
-
- - show/hide user name
- - show/hide cover
 
 *Please use the Github issue tracker!
