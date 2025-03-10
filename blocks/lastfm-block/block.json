@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "lastfm-block/lastfm-tracks",
+    "version": "0.1.0",
+    "title": "LastFM Recent Tracks",
+    "category": "widgets",
+    "icon": "playlist-audio",
+    "description": "Display your LastFM recently played tracks",
+    "keywords": ["lastfm", "music", "tracks", "recent"],
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "lastfmUser": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "textdomain": "lastfm-block",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css"
+} 

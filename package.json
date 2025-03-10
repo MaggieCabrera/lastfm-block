@@ -1,0 +1,32 @@
+{
+    "name": "lastfm-block",
+    "version": "0.1.0",
+    "description": "LastFM Recent Tracks Block and Widget for WordPress",
+    "author": "Maggie Cabrera",
+    "license": "MIT",
+    "scripts": {
+        "build": "wp-scripts build --webpack-src-dir=blocks/lastfm-block/src --output-path=blocks/lastfm-block/build",
+        "format": "wp-scripts format",
+        "lint:css": "wp-scripts lint-style",
+        "lint:js": "wp-scripts lint-js",
+        "packages-update": "wp-scripts packages-update",
+        "plugin-zip": "wp-scripts plugin-zip",
+        "start": "wp-scripts start --webpack-src-dir=blocks/lastfm-block/src --output-path=blocks/lastfm-block/build"
+    },
+    "dependencies": {
+        "@wordpress/block-editor": "^12.15.0",
+        "@wordpress/blocks": "^12.24.0",
+        "@wordpress/components": "^25.13.0",
+        "@wordpress/element": "^5.24.0",
+        "@wordpress/i18n": "^4.47.0",
+        "@wordpress/server-side-render": "^4.24.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "@types/wordpress__block-editor": "^11.5.7",
+        "@types/wordpress__blocks": "^12.5.7",
+        "@types/wordpress__components": "^23.0.8",
+        "@wordpress/scripts": "^26.19.0",
+        "typescript": "^5.3.3"
+    }
+} 

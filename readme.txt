@@ -27,7 +27,7 @@ Clean and simple recently played Last.FM Plugin for WordPress.
 
 Contact me, via Github or post your issue in the bug tracker there.
 
-https://github.com/nicolasbettag/LastFM-Played-for-Wordpress/issues
+https://github.com/MaggieCabrera/lastfm-block/issues
 
 == Screenshots ==
 
