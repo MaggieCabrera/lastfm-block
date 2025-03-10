@@ -1,11 +1,8 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
+import { useBlockProps } from '@wordpress/block-editor';
+import { Placeholder, TextControl, Button } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
-import React from 'react';
-
-import './editor.scss';
+import { useState } from '@wordpress/element';
 
 interface LastFMBlockAttributes {
     lastfmUser: string;
@@ -19,24 +16,35 @@ interface EditProps {
 export default function Edit({ attributes, setAttributes }: EditProps): JSX.Element {
     const blockProps = useBlockProps();
     const { lastfmUser } = attributes;
+    const [inputValue, setInputValue] = useState(lastfmUser || '');
 
     return (
         <div {...blockProps}>
-            <InspectorControls>
-                <PanelBody title={__('LastFM Settings', 'lastfm-block')}>
+            <Placeholder
+                label={__('LastFM Recent Tracks', 'lastfm-block')}
+                instructions={__('Enter your LastFM username to display your recent tracks', 'lastfm-block')}
+            >
+                <div className="lastfm-block__input-group">
                     <TextControl
-                        label={__('LastFM Username', 'lastfm-block')}
-                        value={lastfmUser}
-                        onChange={(value: string) => setAttributes({ lastfmUser: value })}
-                        help={__('Enter your LastFM username to display your recent tracks', 'lastfm-block')}
+                        value={inputValue}
+                        onChange={setInputValue}
+                        placeholder={__('Your LastFM username', 'lastfm-block')}
                     />
-                </PanelBody>
-            </InspectorControls>
-            
-            <ServerSideRender
-                block="lastfm-block/lastfm-tracks"
-                attributes={attributes}
-            />
+                    <Button 
+                        variant="primary"
+                        onClick={() => setAttributes({ lastfmUser: inputValue })}
+                    >
+                        {__('Display Tracks', 'lastfm-block')}
+                    </Button>
+                </div>
+            </Placeholder>
+
+            {lastfmUser && (
+                <ServerSideRender
+                    block="lastfm-block/lastfm-tracks"
+                    attributes={attributes}
+                />
+            )}
         </div>
     );
 } 

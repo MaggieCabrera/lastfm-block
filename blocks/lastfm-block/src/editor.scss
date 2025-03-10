@@ -1,4 +1,14 @@
 .wp-block-lastfm-block-lastfm-tracks {
     padding: 1em;
     border: 1px dashed #ccc;
+
+    .lastfm-block__input-group {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+
+        .components-text-control__input {
+            min-width: 200px;
+        }
+    }
 } 
