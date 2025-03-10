@@ -1,6 +1,8 @@
 .wp-block-lastfm-block-lastfm-tracks {
-    padding: 1em;
-    border: 1px dashed #ccc;
+    .components-placeholder {
+        padding: 1em;
+        border: 1px dashed #ccc;
+    }
 
     .lastfm-block__input-group {
         display: flex;

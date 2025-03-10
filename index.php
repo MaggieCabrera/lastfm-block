@@ -35,6 +35,7 @@ function lastfm_style() {
 }
 add_action( 'wp_enqueue_scripts', 'lastfm_style' );
 add_action( 'enqueue_block_editor_assets', 'lastfm_style' );
+add_action( 'enqueue_block_assets', 'lastfm_style' );
 
 /**
  * Initialize the block
